@@ -56,11 +56,49 @@ button {
 }
 .header nav {
   display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--black);
+  min-height: 100vh;
+}
+.header nav.open {
+  display: block;
+}
+.header nav .nav-logo {
+  padding: 30px;
+}
+
+.header nav ul {
+  padding-top: 100px;
+}
+.header nav ul li {
+  margin-bottom: 30px;
+  padding-left: 40px;
+}
+.header nav ul li button {
+  text-transform: uppercase;
+  font-size: 36px;
 }
 .header .menu-btn {
   padding: 20px;
   cursor: pointer;
+  transition: 0.4s;
 }
+.header .menu-btn.rotate .bar-1 {
+  transform: rotate(40deg);
+}
+.header .menu-btn.rotate .bar-2 {
+  transform: rotate(0deg);
+  opacity: 0;
+}
+.header .menu-btn.rotate .bar-3 {
+  transform: rotate(-40deg);
+  margin-top: -18px;
+}
+
 .header .menu-btn .bar {
   width: 35px;
   height: 3px;
@@ -280,6 +318,16 @@ button {
 }
 
 @media (min-width: 1024px) {
+  .header .menu-btn {
+    display: none;
+  }
+  .header nav {
+    display: block;
+    background-color: transparent;
+  }
+  .header nav .nav-logo {
+    display: none;
+  }
   .showcase {
     background: url(./images/desktop/image-hero.jpg);
     background-repeat: no-repeat;

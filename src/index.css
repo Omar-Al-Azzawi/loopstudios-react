@@ -68,7 +68,7 @@ button {
   display: block;
 }
 .header nav .nav-logo {
-  padding: 30px;
+  padding: 40px;
 }
 
 .header nav ul {
@@ -318,6 +318,9 @@ button {
 }
 
 @media (min-width: 1024px) {
+  .header {
+    padding: 20px 30px;
+  }
   .header .menu-btn {
     display: none;
   }
@@ -327,6 +330,25 @@ button {
   }
   .header nav .nav-logo {
     display: none;
+  }
+  .header nav ul {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    right: 0;
+    padding: 20px 30px;
+  }
+  .header nav ul li button {
+    font-size: 15px;
+    transition: all 300ms ease-in-out;
+  }
+  .header nav ul li button:hover {
+    color: var(--black);
+    text-shadow: 0 0 10px var(--white);
+    cursor: pointer;
+    font-weight: bolder;
+    border-bottom: 2px solid var(--white);
   }
   .showcase {
     background: url(./images/desktop/image-hero.jpg);
